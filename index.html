@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c1981708c2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/Ganesh Logo.svg" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>
+            Hi, I'm Ravuri <span>Ganesh</span><br />
+            Sharma
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!---------------About------------->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/6170139761507942796.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am deeply passionate about building full-stack web applications
+              using modern technologies like React, Node.js, and Next.js. I
+              enjoy turning ideas into real, functional products and
+              continuously strive to write clean, efficient, and scalable code.
+              I’m always eager to learn new tools and frameworks that enhance
+              performance and user experience.My goal is to become a
+              well-rounded developer capable of handling all aspects of web
+              application development—from front-end design to back-end
+              integration.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('certifications')">
+                Certifications
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Programing Languages</span><br />Java, Python, C, Sql,
+                  Html, CSS, JavaScript
+                </li>
+                <li><span>Frameworks</span><br />React.js, Next.js</li>
+                <li><span>Tools</span><br />Git/GitHub, VS Code, Intellij</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="certifications">
+              <ul>
+                <li><span>Java</span><br />Java(Basic)</li>
+                <li><span>Python</span><br />Python(Basic)</li>
+                <li><span>AWS</span><br />AWS Cloud Practitioner</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2019</span><br />Bhashyam Blooms</li>
+                <li><span>2021</span><br />Sri Chaitanya</li>
+                <li><span>2025</span><br />KL University</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------------Services----------------->
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Responsive Website Design&Development</h2>
+            <p
+              class="service-desc"
+              data-full=" I create fully responsive websites that look great and function
+              smoothly across all screen sizes. Using HTML, CSS, and JavaScript,
+              I ensure clean layouts, fast load times, and optimized
+              performance. Whether it's a portfolio or a business site, I build
+              with scalability and usability in mind."
+            >
+              I create fully responsive websites that look great and function
+              smoothly across all screen sizes. Using HTML, CSS, and JavaScript,
+            </p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>From Design to Deployment</h2>
+            <p
+              class="service-desc"
+              data-full="I handle the complete development process—from initial design
+              concepts to final deployment. I focus on understanding your brand
+              and goals, then build customized solutions that meet your exact
+              needs. You get a seamless, stress-free experience with full
+              support at every stage."
+            >
+              I handle the complete development process—from initial design
+              concepts to final deployment. I focus on understanding your brand
+              and goals,
+            </p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>Pixel-Perfect Frontend UI Design</h2>
+            <p
+              class="service-desc"
+              data-full="I craft visually appealing and user-friendly interfaces using
+              tools like Figma and React. My designs are precise, consistent,
+              and aligned with the latest UI/UX trends. Each element is
+              thoughtfully placed to ensure an intuitive and engaging user
+              experience."
+            >
+              I craft visually appealing and user-friendly interfaces using
+              tools like Figma and React. My designs are precise, consistent,
+            </p>
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------Portfolio-------------->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/virtual_mouse_resized_650x800.png" />
+            <div class="layer">
+              <h3>Virtual Mouse Using Hand Gesture</h3>
+              <p>
+                Built a real-time virtual mouse using webcam input with
+                MediaPipe for hand landmark detection and OpenCV for image
+                processing, enabling cursor control and clicks through fingertip
+                gestures.
+              </p>
+              <a href="https://github.com/Ganesh4477/virtual-mouse"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/portfolio image.png" />
+            <div class="layer">
+              <h3>My Portfolio</h3>
+              <p>
+                Created a modern personal portfolio website with smooth
+                animations and responsive design using HTML, CSS, and JavaScript
+                to showcase projects and skills professionally.
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/E-learning managment...png" />
+            <div class="layer">
+              <h3>E-Learning Website</h3>
+              <p>
+                Developed an e-learning website using Next.js and Node.js with
+                an admin dashboard for analytics and integrated Stripe for
+                secure live payment processing.
+              </p>
+              <a href="https://e-learning-client-beryl.vercel.app/"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-------------------contact----------------------->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>ganeshravuri4477@gmail.com
+            </p>
+            <p><i class="fa-solid fa-square-phone"></i>9440865659</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/ganesh.ravuri.96/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/ganesh-ravuri-77327a238/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+            <a href="images/Ganesh-resume.pdf" download class="btn btn2"
+              >Download Resume</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>copyright &copy; Ravuri Ganesh Sharma</p>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbz-tgcEVL1_bF1weGVfW5t3qnqgaLkdCfKVwYj4C8doXKnwDvPNeYH8juSvfj0lBSfBFQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+
+    <script>
+      function getFirst30Words(text) {
+        const words = text.trim().split(" ");
+        return words.length > 30 ? words.slice(0, 30).join(" ") + "..." : text;
+      }
+
+      document.querySelectorAll(".services-list div").forEach((service) => {
+        const p = service.querySelector(".service-desc");
+        const link = service.querySelector(".learn-more");
+        const fullText = p.getAttribute("data-full");
+        const shortText = getFirst30Words(fullText);
+
+        // Initial state: show 30 words
+        p.textContent = shortText;
+        link.textContent = "Learn more";
+
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const isExpanded = link.textContent === "Show less";
+
+          if (isExpanded) {
+            p.textContent = shortText;
+            link.textContent = "Learn more";
+          } else {
+            p.textContent = fullText;
+            link.textContent = "Show less";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
