@@ -223,6 +223,9 @@
               <a href="https://www.linkedin.com/in/ganesh-ravuri-77327a238/"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
+              <a href="https://github.com/Ganesh4477"
+                ><i class="fa-brands fa-github"></i
+              ></a>
             </div>
             <a href="images/Ganesh-resume.pdf" download class="btn btn2"
               >Download Resume</a
@@ -331,6 +334,25 @@
             link.textContent = "Show less";
           }
         });
+      });
+    </script>
+
+    <script>
+      let lastScrollTop = 0;
+      const nav = document.querySelector("nav");
+
+      window.addEventListener("scroll", () => {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down
+          nav.style.top = "-80px"; // hide navbar
+        } else {
+          // Scrolling up
+          nav.style.top = "0"; // show navbar
+        }
+        lastScrollTop = scrollTop;
       });
     </script>
   </body>
